@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <script>
+            function clicklogin(){
+               var loginid = document.getElementById("login").value;
+               var password = document.getElementById("psw").value;
+
+               var msg=document.getElementById("msg");
+               var userdetails={loginid:'anil',password:'anil'};
+
+               (loginid==userdetails.loginid && password==userdetails.password)?
+               document.write("Login successfully"):msg.innerHTML="Invalid username/password"
+            }
+        </script>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h2>Login Page</h2>
+            <form>
+                <tr>
+                    <td><input type="text" placeholder="Login id" required id="login"></td>
+                </tr>
+                <br><br>
+                <tr>
+                    <td><input type="password" placeholder="password" required id="psw"></td>
+                </tr>
+                <br><br> 
+                <input type="button" value="Sumbit" onclick="clicklogin()" style="background-color: rgb(0, 0, 255); color: white; border: none; padding: 7px 7px 7px 7px; border-radius: 2px;">
+            </form>
+            <div>
+                <p id="msg"></p>
+            </div>
+        </div>       
+    </body>
+</html>
